@@ -13,7 +13,6 @@ It covers an end-to-end process of normalizing a denormalized dataset, performin
 ## 🧩 Database Schema  
 
 ```sql
--- create table
 DROP TABLE IF EXISTS spotify;
 CREATE TABLE spotify (
     artist VARCHAR(255),
