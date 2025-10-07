@@ -2,7 +2,7 @@
 
 [Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
 
-![Spotify Logo](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/spotifyylogo.jpg)
+![Spotify Logo](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotifyylogo.jpg)
 
 ## Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries  and optimizing query performance.  
@@ -66,7 +66,7 @@ Execution Time (E.T.): 6 ms
 Planning Time (P.T.): 0.17 ms
 
 The screenshot below shows the EXPLAIN result before optimization:
-      ![EXPLAIN Before Index](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/before_query_optimization.png)
+      ![EXPLAIN Before Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/before_query_optimization.png)
 
 - **Index Creation on the `artist` Column**
   An index was created on the `artist` column to optimize query performance and enable faster retrieval of rows when filtering by artist.
@@ -80,14 +80,15 @@ The screenshot below shows the EXPLAIN result before optimization:
         - Execution time (E.T.): **0.153 ms**
         - Planning time (P.T.): **0.152 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
-      ![EXPLAIN After Index](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/after_query_optimization.png)
+      ![EXPLAIN After Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/after_query_optimization.png
+)
 
 - **Graphical Performance Comparison**
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
-      ![Performance Graph](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/spotify_graphical%20view%203.png)
-      ![Performance Graph](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/spotify_graphical%20view%202.png)
-      ![Performance Graph](https://github.com/Subhasree05/spotify-data-analysis-/blob/main/spotify_graphical%20view%201.png)
+      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%203.png)
+      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%202.png)
+      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%201.png)
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
 ---
