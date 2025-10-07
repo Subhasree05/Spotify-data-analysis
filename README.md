@@ -55,7 +55,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 
 To improve query performance, the following optimization steps were performed:
 
- - **Initial Query Performance Analysis Using EXPLAIN**
+Initial Query Performance Analysis Using EXPLAIN
 
 Query performance was first analyzed using the EXPLAIN command.
 
