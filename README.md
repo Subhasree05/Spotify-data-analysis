@@ -1,6 +1,6 @@
 # Spotify  SQL Project and Query Optimization 
 
-[Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
+
 
 ![Spotify Logo](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotifyylogo.jpg)
 
