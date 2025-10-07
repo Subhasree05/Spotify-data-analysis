@@ -1,11 +1,16 @@
-# Spotify  SQL Project and Query Optimization 
+# 🎵 Spotify SQL Project & Query Optimization  
 
+![Spotify Logo](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotifyylogo.jpg)  
 
+---
 
-![Spotify Logo](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotifyylogo.jpg)
+## 📘 Overview  
+This project involves analyzing a **Spotify dataset** with various attributes about tracks, albums, and artists using **SQL**.  
+It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries, and optimizing query performance.  
 
-## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries  and optimizing query performance.  
+---
+
+## 🧩 Database Schema  
 
 ```sql
 -- create table
@@ -37,81 +42,91 @@ CREATE TABLE spotify (
     most_played_on VARCHAR(50)
 );
 ```
-## Project Steps
-
-### 1. Data Exploration
-The dataset contains attributes such as:
-- `Artist`: The performer of the track.
-- `Track`: The name of the song.
-- `Album`: The album to which the track belongs.
-- `Album_type`: The type of album (e.g., single or album).
-- Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
-
-### 2. Querying the Data
-After the data is inserted, various SQL queries can be written to explore and analyze the data. 
-
-
-## Query Optimization Technique 
-
-To improve query performance, the following optimization steps were performed:
-
-Initial Query Performance Analysis Using EXPLAIN
-
-Query performance was first analyzed using the EXPLAIN command.
-
-The query retrieved tracks based on the artist column, with the following performance metrics:
-
-Execution Time (E.T.): 6 ms
-
-Planning Time (P.T.): 0.17 ms
-
-The screenshot below shows the EXPLAIN result before optimization:
-      ![EXPLAIN Before Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/before_query_optimization.png)
-
-- **Index Creation on the `artist` Column**
-  An index was created on the `artist` column to optimize query performance and enable faster retrieval of rows when filtering by artist.
-    - **SQL command** for creating the index:
-      ```sql
-      CREATE INDEX idx_artist ON spotify_tracks(artist);
-      ```
-
-- **Performance Analysis After Index Creation**
-    - After creating the index,  the same query was run again and observed significant improvements in performance:
-        - Execution time (E.T.): **0.153 ms**
-        - Planning time (P.T.): **0.152 ms**
-    - Below is the **screenshot** of the `EXPLAIN` result after index creation:
-      ![EXPLAIN After Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/after_query_optimization.png
-)
-
-- **Graphical Performance Comparison**
-    - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
-    - **Graph view** shows the significant drop in both execution and planning times:
-      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%203.png)
-      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%202.png)
-      ![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%201.png)
-
-This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
----
-
-## Technology Stack
-- **Database**: PostgreSQL
-- **SQL Queries**: DDL, DML, Aggregations, Joins, Subqueries, Window Functions
-- **Tools**: pgAdmin 4 , PostgreSQL 
-
-## How to Run the Project
-1. Install PostgreSQL and pgAdmin (if not already installed).
-2. Set up the database schema and tables.
-3. Insert the  data into the respective tables.
-4. Execute SQL queries.
-
-
 
 ---
 
-## Contributing
-If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.
+## 🚀 Project Steps  
+
+### 🔹 1. Data Exploration  
+The dataset contains attributes such as:  
+- **Artist**: The performer of the track.  
+- **Track**: The name of the song.  
+- **Album**: The album to which the track belongs.  
+- **Album Type**: The type of album (e.g., single or album).  
+- Various metrics such as **danceability**, **energy**, **loudness**, **tempo**, and more.  
 
 ---
 
-## License
-This project is licensed under the MIT License.
+### 🔹 2. Querying the Data  
+After the data is inserted, various SQL queries can be written to explore and analyze the data.  
+
+---
+
+## ⚙️ Query Optimization Technique  
+
+To improve query performance, the following optimization steps were performed:  
+
+### 🔸 Initial Query Performance Analysis Using `EXPLAIN`  
+- Query performance was first analyzed using the **`EXPLAIN`** command.  
+- The query retrieved tracks based on the **`artist`** column, with the following performance metrics:  
+  - **Execution Time (E.T.):** 6 ms  
+  - **Planning Time (P.T.):** 0.17 ms  
+- The screenshot below shows the **`EXPLAIN`** result before optimization:  
+
+![EXPLAIN Before Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/before_query_optimization.png)
+
+---
+
+### 🔸 Index Creation on the `artist` Column  
+- An index was created on the **`artist`** column to optimize query performance and enable faster retrieval of rows when filtering by artist.  
+- **SQL Command:**  
+  ```sql
+  CREATE INDEX idx_artist ON spotify_tracks(artist);
+  ```
+
+---
+
+### 🔸 Performance Analysis After Index Creation  
+- After creating the index, the same query was run again, and significant improvements were observed:  
+  - **Execution Time (E.T.):** 0.153 ms  
+  - **Planning Time (P.T.):** 0.152 ms  
+- The screenshot below shows the **`EXPLAIN`** result after optimization:  
+
+![EXPLAIN After Index](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/after_query_optimization.png)
+
+---
+
+### 📊 Graphical Performance Comparison  
+- A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.  
+- **Graph view** shows the significant drop in both execution and planning times:  
+
+![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%203.png)  
+![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%202.png)  
+![Performance Graph](https://github.com/Subhasree05/Spotify-data-analysis/blob/main/images/spotify_graphical%20view%201.png)  
+
+This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.  
+
+---
+
+## 🧠 Technology Stack  
+- 🗄️ **Database:** PostgreSQL  
+- 💾 **SQL Queries:** DDL, DML, Aggregations, Joins, Subqueries, Window Functions  
+- 🧰 **Tools:** pgAdmin 4, PostgreSQL  
+
+---
+
+## ⚡ How to Run the Project  
+1. Install **PostgreSQL** and **pgAdmin** (if not already installed).  
+2. Set up the database schema and tables.  
+3. Insert the dataset into the respective tables.  
+4. Execute the SQL queries.  
+
+---
+
+## 🤝 Contributing  
+If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.  
+
+---
+
+## 📜 License  
+This project is licensed under the **MIT License**.  
